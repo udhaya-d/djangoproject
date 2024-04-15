@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'library.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'homeStyle.css' %}" /> -->
+  </head>
+  <body>
+    {% block "main" %}
+    <div class="container">
+      <!-- <img src="./library.jpeg" /> -->
+      <!-- <h1>Library Book Management System</h1>
+    <input type="text" /><br>
+    <button>Submit</button> -->
+      <div class="card">
+        <h1>Library Management System</h1>
+        <input
+          class="bookname"
+          type="text"
+          name="bookname"
+          placeholder="Searchbook..."
+        />
+        <p>or</p>
+        <button type="newadd" class="newadd">
+          <a href="{% url 'newaddPage' %}">Newadd</a>
+        </button>
+        <button type="submit" class="submit">
+          <a href="{% url 'homepage' %}">Submit</a>
+        </button>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

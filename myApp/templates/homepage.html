@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homeStyle.css' %}" />
+  </head>
+  <body>
+    <!-- <ul>
+      <li><a href="{% url 'newaddPage' %}">newadd</a></li>
+      <li><a href="{% url 'updatepage' %}">update</a></li>
+      <li><a href="{% url 'deletepage' %}">delete</a></li>
+      <li><a href="#about">About</a></li>
+    </ul> -->
+    <div class="container">
+      <ul>
+        <button type="newadd" class="newadd">
+          <li><a href="{% url 'newaddPage' %}">newadd</a></li>
+          <!-- <a href="{% url 'newaddPage' %}">Newadd</a> -->
+        </button>
+        <button type="update" class="update">
+          <li><a href="{% url 'updatepage' %}">update</a></li>
+          <!-- <a href="{% url 'updatepage' %}">Update</a> -->
+        </button>
+        <button type="delete" class="delete">
+          <li><a href="{% url 'deletepage' %}">delete</a></li>
+          <!-- <a href="{% url 'deletepage' %}">Delete</a> -->
+        </button>
+      </ul>
+      <div class="card">
+        <h1>Home page</h1>
+        <p>Book Name:</p>
+        <p>Author:</p>
+        <p>Edition:</p>
+        <p>Available:</p>
+      </div>
+    </div>
+  </body>
+</html>
